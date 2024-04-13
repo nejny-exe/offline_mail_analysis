@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню</title>
+    <style>
+        /* Добавим немного стилей для кнопок */
+        .menu-button {
+            display: block;
+            width: 200px;
+            height: 40px;
+            margin-bottom: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .log_out_btn {
+            display: block;
+            width: 200px;
+            height: 40px;
+            margin-bottom: 10px;
+            background-color: #ff5370;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Меню</h1>
+    <!-- Используем кнопки вместо ссылок -->
+    <form action="/vulnerabilities">
+        <button type="submit" class="menu-button">Уязвимости</button>
+    </form>
+    <form action="/administration">
+        <button type="submit" class="menu-button">Администрирование</button>
+    </form>
+    <form action="/create_profile">
+        <button type="submit" class="menu-button">Создать профиль</button>
+    </form>
+    <form action="/check">
+        <button type="submit" class="menu-button">Проверка</button>
+    </form>
+    <form action="/logout">
+        <button type="submit" class="log_out_btn">Выйти</button>
+    </form>
+</body>
+</html>

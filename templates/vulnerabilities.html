@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Уязвимости</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Уязвимости</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Название</th>
+            <th>Уровень</th>
+        </tr>
+        {% for vulnerability in vulnerabilities %}
+        <tr>
+            <td>{{ vulnerability.id }}</td>
+            <td>{{ vulnerability.name }}</td>
+            <td>{{ vulnerability.severity }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
