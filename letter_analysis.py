@@ -16,7 +16,7 @@ users = {
 
 
 vulnerabilities_data = [
-    {'id': 1, 'name': 'Уязвимость 1', 'severity': 'Высокая'},
+    {'id': 1, 'name': 'Уязвимость 1', 'severity': 'Высокая', 'direct':'c:/programmfiles/'},
     {'id': 2, 'name': 'Уязвимость 2', 'severity': 'Средняя'},
     {'id': 3, 'name': 'Уязвимость 3', 'severity': 'Низкая'}
 ]
@@ -38,7 +38,7 @@ def login():
             logging.info(f'Пользователь {username} вошел в систему')
             return redirect(url_for('index'))
         else:
-            return 'Неверное имя пользователя или пароль'
+            return render_template('login.html', error_message='Неверное имя пользователя или пароль')
     return render_template('login.html')
 
 @app.route('/logout')
